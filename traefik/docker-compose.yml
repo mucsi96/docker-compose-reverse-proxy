@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  client:
+    build: ../logger
+    environment:
+      - NAME=client
+  server:
+    build: ../logger
+    environment:
+      - NAME=server
+  reverse-proxy:
+    image: traefik
+    ports:
+      - "8080:80"
+    volumes:
+      - ./traefik_static_conf.yml:/etc/traefik/traefik.yml
+      - ./traefik_dynamic_conf.yml:/etc/traefik/traefik_dynamic_conf.yml
