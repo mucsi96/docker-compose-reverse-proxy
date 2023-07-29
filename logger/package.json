@@ -1,0 +1,13 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Igor Bari",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node logger.js"
+  }
+}
