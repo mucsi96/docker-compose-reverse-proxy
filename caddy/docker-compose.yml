@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  client:
+    build: ../logger
+    environment:
+      - NAME=client
+  server:
+    build: ../logger
+    environment:
+      - NAME=server
+  reverse-proxy:
+    image: caddy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile

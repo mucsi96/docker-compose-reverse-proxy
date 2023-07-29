@@ -1,0 +1,19 @@
+{
+    auto_https off
+}
+
+:80 {
+
+    handle /* {
+
+        reverse_proxy http://client:8080
+
+    }
+
+    handle /api* {
+
+        reverse_proxy http://server:8080
+
+    }
+
+}
